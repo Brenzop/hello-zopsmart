@@ -110,11 +110,9 @@ for preserving the changes of current branch
 
 //REnaming branch
 1. If you want to rename a branch while pointed to any branch, do:
-
 git branch -m <oldname> <newname>
 
 2. If you want to rename the current branch, you can do:
-
 git branch -m <newname>
 
 //ammend the comment
