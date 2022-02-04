@@ -127,3 +127,6 @@ git commit --amend -m "New commit message."
 git reset HEAD^ or git reset HEAD~1
 1. git reset --hard //permanently delete
 2. git reset --soft  // remains
+
+//for history
+git log
