@@ -98,6 +98,16 @@ $ git push <remote_name> :<branch_name>
 Git v2.8.0
 git push -d 
 
+Git add
+//git add is a multipurpose command — you use it to begin tracking new files, to stage files, and to do other things like marking merge-conflicted files as resolved.
+
+//for getting short status
+git status -s or git status --short
+
+for preserving the changes of current branch
+//git stash 
+//git stash pop
+
 //REnaming branch
 1. If you want to rename a branch while pointed to any branch, do:
 
@@ -112,3 +122,8 @@ Amend the message of the latest pushed commit:
 
 git commit --amend -m "New commit message."
 
+
+//To delete the latest commit but leave all of your changes to the files intact (temporary commit)
+git reset HEAD^ or git reset HEAD~1
+git reset --hard
+git reset --soft
