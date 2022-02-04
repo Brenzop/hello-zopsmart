@@ -1,0 +1,114 @@
+1. Installation 
+git apt-get install git
+
+2. set-up ssh key
+a. Generating a new ssh key
+ssh-keygen -t rsa -b 4096 -C "email"  //generating ssh through rsa algo
+b. add your key to Github
+cat ~/.ssh/id-rsa.pub  //fetching ssh key from pub file
+
+3. Make a directory on the local
+mkdir directory_name
+
+4. go into the directory
+cd directory_name
+
+5. clone repository using ssh
+git clone ssh_address
+
+6. move into repo
+cd repo_name
+
+7. check for the branch
+git branch //tells you that you are currently in main
+
+8. to add/create file/folder in main
+touch file_name.ext
+
+9. check the status
+git status
+
+10. for adding file locally or the staging area
+git add file_name.ext or git add .
+
+11. to config email and name
+git config --global user.email "email"
+git config --global user.name "username"
+
+12. to commit or get ready the file to push
+git commit -m "msg"
+
+13. to push/upload the file remotely
+git push
+
+
+// if you want to create a branch of main from cmd
+1. git branch
+
+2. to create
+git checkout -b branch_name
+git branch  //to check the branch
+
+3. to add/create the file
+touch filename.ext
+
+4. git status  // to check the status of file
+
+5. git add file_name.ext
+
+6. to commit
+git commit -m "msg"
+
+7. to push
+git push --set-upstream origin branch_name
+
+// if you want to add a branch you created through github or remotely
+1. git branch -r
+2. git fetch origin branch_name
+3. git checkout branch_name
+
+// How to switch from one branch to another
+git checkout branch_name
+
+
+//
+git fetch downloads all the changes needed to represent the given remote branch. Typically this is origin/master or similar.
+
+//
+git merge merges two branches together by creating new commits or fast-forwarding (or a combination). It doesn't change any commits you have made, and you can always roll back to your old branch (using git reset or git checkout).
+
+Note that git pull is git fetch followed by git merge (or git rebase if --rebase is given).
+
+Delete Local Branch
+//$ git branch -d <branch_name>
+$ git branch -D <branch_name>
+
+  1.  The -d option is an alias for --delete, which only deletes the branch if it has already been fully merged in its upstream branch.
+  2. The -D option is an alias for --delete --force, which deletes the branch "irrespective of its merged status."
+
+Delete Remote Branch
+Git v1.7.0
+$ git push <remote_name> --delete <branch_name>
+
+easier to remember than
+
+Git v1.5.0
+$ git push <remote_name> :<branch_name>
+
+Git v2.8.0
+git push -d 
+
+//REnaming branch
+1. If you want to rename a branch while pointed to any branch, do:
+
+git branch -m <oldname> <newname>
+
+2. If you want to rename the current branch, you can do:
+
+git branch -m <newname>
+
+//ammend the comment
+Amend the message of the latest pushed commit:
+
+git commit --amend -m "New commit message."
+
